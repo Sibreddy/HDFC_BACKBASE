@@ -1,0 +1,13 @@
+---
+- name: take the axisitng application backup and verify the backup files 
+  hosts: all
+  remote_user: root
+  become: ture
+  tasks:
+    - name: Copy files with owner and permissions
+      ansible.builtin.copy:                                                                           # This is the Ansible module to copy the file in AIX server
+        src: /usr/IBM/WebSphere/AppServer/profiles/portalAppProf/installedApps/HBPORTALUAPP1Cell01/   # Its the source file path 
+        dest: 
+        owner: foo
+        group: foo
+        mode: '0644'
