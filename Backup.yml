@@ -1,0 +1,12 @@
+---
+- name: Backup Playbook
+  hosts: all
+  vars_files:
+     - backbase_var_file.yml
+  tasks:
+    - name: create backup on bundel directory
+      copy: 
+        src: "{{ item.src}}"
+        dest:  "{{ item.dest }}"
+      loop: backup_files
+  
