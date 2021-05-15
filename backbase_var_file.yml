@@ -1,6 +1,6 @@
 ---
 - backup_files:
-       - src: /home/noc/Downlods/kdumpconfig.sh
-         dest: /root/siba/
-       - src: /home/noc/Downlods/ec2_servera.pem
-         dest: /root/ansible 
+    - src: /home/noc/Downloads/kdumpconfig.sh
+      dest: /root/siba/kdumpconfig.sh
+    - src: /home/noc/Downloads/ec2_servera.pem
+      dest: /root/ansible/ec2_servera.pem
