@@ -6,6 +6,12 @@
   tasks:
     - name: create backup on bundel directory
       copy: 
-        src: "{{ item.src}}"
-        dest:  "{{ item.dest }}"
-      loop: "{{ backup_files }}"  
+        src: "{{item.src}}"
+        dest:  "{{item.dest}}"
+      loop: "{{backup_files}}"
+    
+    - name: role back
+      copy: 
+        src:  "{{item.dest}}"
+        dest: "{{item.src}}"
+      loop: "{{backup_files}}"
